@@ -1,3 +1,23 @@
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        hashset = set()
+
+        
+        for n in nums:
+          if n in hashset:
+            return True
+          hashset.add(n)
+        return False
+
+# explanation
+
+# loop through the array
+# if element we are at is in hashset then there is a duplicate so we return True
+# else its not in the hashset so we add it to hashset
+# if looping through nums array finishes that means we didnt find a duplicate so we return False outside of the loop
+# linear time and spear because it will create a hashset and will also loop through entire array N times
+
+
 # Code
 # Testcase
 # Test Result
