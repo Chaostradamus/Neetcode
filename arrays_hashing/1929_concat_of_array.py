@@ -1,3 +1,19 @@
+class Solution:
+    def getConcatenation(self, nums: List[int]) -> List[int]:
+      # ans = nums + nums
+      # return ans
+      ans = []
+
+      for i in range(2):
+        for n in nums:
+          ans.append(n)
+      return ans
+    
+# i just concatted nums + nums and returned
+# neetcode way was to go through nums twice and append each element in nums to ans...so we will go through 2 loops of that
+# o(2n) runtime and answer where n is number of elements in nums
+# if interviewer asks for more than 2 loops we can change range variable to x
+
 # 1929. Concatenation of Array
 # Solved
 # Easy
