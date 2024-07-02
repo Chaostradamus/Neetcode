@@ -23,6 +23,7 @@ class Solution:
 # or it will jump out early because we found a different letter or one of the words are shorter than the others
 # return res after
 
+# https://pythontutor.com/render.html#code=from%20typing%20import%20List%0A%0Aclass%20Solution%3A%0A%20%20%20%20def%20longestCommonPrefix%28self,%20strs%3A%20List%5Bstr%5D%29%20-%3E%20str%3A%0A%20%20%20%20%20%20res%20%3D%20%22%22%0A%0A%20%20%20%20%20%20for%20i%20in%20range%28len%28strs%5B0%5D%29%29%3A%0A%20%20%20%20%20%20%20%20for%20s%20in%20strs%3A%0A%20%20%20%20%20%20%20%20%20%20if%20i%20%3E%20len%28s%29%20or%20s%5Bi%5D%20!%3D%20strs%5B0%5D%5Bi%5D%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20return%20res%0A%20%20%20%20%20%20%20%20%20%20res%20%2B%3D%20strs%5B0%5D%5Bi%5D%0A%20%20%20%20%20%20return%20res%0A%0A%0A%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%0Ab%20%3D%20Solution%28%29%0Ab.longestCommonPrefix%28%5B%22flower%22,%22flow%22,%22flight%22%5D%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=311&rawInputLstJSON=%5B%5D&textReferences=false
 
 # 14. Longest Common Prefix
 # Easy
