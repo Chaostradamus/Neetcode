@@ -14,7 +14,8 @@ class Solution:
 # o(n) runtime and constant time space except for the res array which leetcode doesnt count
 # we iterate through nums first and we make it negative
 # this signifies that the number exists and marked through the INDEX of nums
-# then we go through newly fixed nums array and if at that index the nunebr is positive, we know thorugh the INDEX that the number is missing so we append the i +1 to result
+# then we go through newly fixed nums array and if at that index the nunebr is positive, we know throrugh the INDEX that the number is missing so we append the i +1 to result
+# for indexing issues
 
 # 448. Find All Numbers Disappeared in an Array
 # Easy
