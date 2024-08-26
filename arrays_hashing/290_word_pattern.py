@@ -16,6 +16,18 @@ class Solution:
         c2w[c] = w
         w2c[w] = c
       return True
+
+# o(N+M) because we go through both lists once
+# we split the string by the spaces into a new array of words
+# we check if the patterns length and words array length are the same
+# we zip through pattern and words
+  # zip goes through both iterables at the same time
+  # if check for the character in pattern
+  # if it exists in the hashmap and its NOT to that word return false
+  # if check if that word is in the hashmap and mapped to the correct character else return false
+  # we do both ways because initially A can mape to cat then B can map to cat...so when we check the word to character we find that cat is already
+  # mapped to A so we can return false
+
     
 
 
