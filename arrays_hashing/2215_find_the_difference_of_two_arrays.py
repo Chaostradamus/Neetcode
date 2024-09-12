@@ -1,3 +1,19 @@
+class Solution:
+    def findDifference(self, nums1: List[int], nums2: List[int]) -> List[List[int]]:
+        n1 = set(nums1)
+        n2 = set(nums2)
+
+        n1a = [num for num in n1 if num not in n2]
+        n2a = [num for num in n2 if num not in n1]
+
+        return [n1a, n2a]
+
+
+# o(n) time and space
+# we put both nums1 and nums2 into sets to avoid duplicates
+# we then iterate over nums1 set checking if nums1 elements arent in nums2 and return as another list
+# we do the same with nums2 checking if each element is in nums1 and return missing values as a list
+# we return a list of lists as the answer
 
 
 
