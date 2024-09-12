@@ -1,3 +1,23 @@
+class Solution:
+    def timeRequiredToBuy(self, tickets: List[int], k: int) -> int:
+      res = 0
+      for i in range(len(tickets)):
+        if i <= k:
+          res += min(tickets[i], tickets[k])
+        else:
+          res += min(tickets[k] -1, tickets[i])
+      return res
+    
+# o(n) runtime and constant time space
+# we iterate through the list of tickets by index
+# if the index is before or right at kth position then we must wait for these to zero out to buy all tickets
+# if this is the case then we add the minimum between tickets/seconds at that position or kth position
+#   this means which position will zero out first between kth and ith where i is before the kth postion
+# if i is after the kth index then we do not have to wait for these positions to zero out
+# we just need the minimum between ith index and kth index but kth index -1 because we wouldnt need to do a full rotation of the line
+# for example 23456 while k is 0.....we will stop after 2 rotations so we wouldnt take the full 2 seconds just 1
+# first rotation would be 12345...then 01234 but we stop right after we hit the quota of 2 tickets for postion k=0
+
 # 2073. Time Needed to Buy Tickets
 # Easy
 # Topics
