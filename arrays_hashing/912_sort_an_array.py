@@ -54,7 +54,7 @@ class Solution:
         # Initial call to mergeSort with the full array (from index 0 to len(nums)-1)
         return mergeSort(nums, 0, len(nums) - 1)
 
-
+# O logN runtime because we split into smaller sublits and rebuild back up and constant space because we dont use any extra memory
 # the main points are two define a merging function and then a main function
 # call mergeSort on the original array 
 # check if its valid and then find the midpoint
