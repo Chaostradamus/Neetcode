@@ -23,6 +23,7 @@ class Solution:
             arr[i] = right[k]
             i += 1
             k += 1
+
         def mergeSort(arr, l, r):
           if l ==  r:
             return arr
@@ -35,6 +36,19 @@ class Solution:
      
 
         return mergeSort(nums, 0, len(nums) -1)
+
+# neetcode
+# merge takes the arr left m and r
+# set left side of the array as l to mid and right from m to r
+# set i pointer to L to iterate over main array nums at the correct spot
+# set other 2 pointers to 0 to iterate over split left and right arrays
+# compare left vs right array and set lowest value as arr[i] and moe pointers accordingly
+
+# in mergeSort function we first check if its a valid boundary with l == r..if it is then we have just one element and return
+# if its not the base case then we find the mid by adding l and r and dividing by 2
+# call mergeSort on left portion of array then right and then sort them 2 by 2 going back up to the original len of the array
+# and then return that array back up
+# return mergeSort on the full array as the call
 
 
 
