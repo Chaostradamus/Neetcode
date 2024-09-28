@@ -10,7 +10,21 @@ class Solution:
       return res
     
 
-
+# this idea is a two pass from left to right then right to left of the nums array
+# the first pass stores the current element's products to the left...we will also store this in a new res array to return as the answer
+# on the way back from right to left we have to store a variable we will call postfix
+# this variable will hold everything to the right of the current element
+# we will initialize it as 1 to start because the last element will just remain the same so we will just multiply by 1
+# we will take the currently last element in res array and multiply it by the post fix
+# we then set postfix of 1 equal to postfix times the nums array at the same iteration
+# this will keep track of every product to the right of current element
+# 
+# as we iterate backwards we will keep multiplying res at current index to postfix 
+# and then setting postfix to postfix time current identitcal index of nums array
+# the idea is traverse left to right storing current elements left side products to the left...then on the way back from
+# right to left we keep a variable to track current elements right side products
+# we multiply them and set it as new res at ith index and then update postfix variable to postfix times nums of ith
+# to accurately track the right side of next current element
 
 
 # 238. Product of Array Except Self
