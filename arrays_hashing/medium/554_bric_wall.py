@@ -21,6 +21,7 @@ class Solution:
 # after the hashmap is filled we will know which length has the most gaps in between bricks
 # we return the total number of rows minus the length that has the most gaps
 
+
 # 554. Brick Wall
 # Medium
 # Topics
