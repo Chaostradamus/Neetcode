@@ -1,3 +1,8 @@
+class Solution:
+    def minSwaps(self, s: str) -> int:
+        
+
+
 # 1963. Minimum Number of Swaps to Make the String Balanced
 # Medium
 # Topics
@@ -13,7 +18,7 @@
 # You may swap the brackets at any two indices any number of times.
 
 # Return the minimum number of swaps to make s balanced.
-array and hashing
+
  
 
 # Example 1:
