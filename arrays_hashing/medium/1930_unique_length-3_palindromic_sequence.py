@@ -27,6 +27,23 @@ class Solution:
 # after the entire alphabet is processed we add current element to left and finish iterating through the rest of the string
 
 
+class Solution:
+    def countPalindromicSubsequence(self, s: str) -> int:
+      count = 0
+      chars = set(s)
+      for c in chars:
+        first, last = s.find(c), s.rfind(c)
+        count += len(set(s[first+1:last]))
+      return count
+    
+# o(n) time and space
+# we keep a count and put s into a hashset
+# we iterate over the hashset elements and set find() anf rfind() on the character
+# the purpose of this is we use each character as an outer shell and search for suitable mid characters
+# since our palindrome can only be length of 3
+# once we find the start and end indexes, we add to count the length of the string from first index +1 to last
+# the plus 1 is for index purposes...we also add it as a set to eliminate duplicates
+# this will return to us the valid palindromes using the current character as the outer shell
 
 
 # 1930. Unique Length-3 Palindromic Subsequences
