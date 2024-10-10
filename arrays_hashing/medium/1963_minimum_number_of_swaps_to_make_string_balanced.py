@@ -1,10 +1,45 @@
 class Solution:
     def minSwaps(self, s: str) -> int:
+        count = 0
+        maxClose = 0
+        for c in s:
+            if c == "[":
+                count -=1
+            else:
+                count += 1
+            maxClose = max(count, maxClose)
+        return (maxClose + 1) // 2
         
 
 
 # o(n) one pass solution
 # keep running count of open parenthesis and if count htis negatives add 2 to count 
+
+
+# Why do we divide by 2?
+# Each swap allows us to exchange an unmatched closing bracket (]) with an unmatched opening bracket ([).
+# One swap fixes two brackets—one opening and one closing.
+# So, to correct a certain number of unmatched brackets, the number of swaps needed is half the number of unmatched closing brackets (maxClose), because each swap addresses both an opening and a closing bracket.
+# Thus, we divide by 2 because each swap corrects 2 brackets (1 closing bracket and 1 opening bracket).
+
+# Why do we add 1?
+# The addition of 1 is used to handle odd numbers of unmatched closing brackets.
+# For example, if maxClose is 3, we have an odd number of unmatched closing brackets. In this case, (3 + 1) // 2 ensures that we round up.
+# Adding 1 ensures that any odd number of unmatched brackets rounds up correctly, giving us the minimum number of swaps needed.
+# Example with an odd number of unmatched closing brackets:
+# Consider a string where there are 3 extra closing brackets at one point (maxClose = 3). We know that:
+
+# Each swap fixes 2 brackets.
+# But with 3 unmatched brackets, we can't perfectly divide by 2 (since we need to swap 1 more bracket than 2).
+# In this case, adding 1 ensures that we account for the extra unmatched bracket, making the formula (3 + 1) // 2 = 2, meaning we need 2 swaps.
+# Example with an even number of unmatched closing brackets:
+# If there are 4 unmatched closing brackets (maxClose = 4):
+
+# The formula (4 + 1) // 2 = 2 correctly gives us 2 swaps.
+# Since each swap fixes 2 brackets, 2 swaps fix all 4 unmatched brackets.
+# Summary:
+# Dividing by 2 handles the fact that each swap fixes 2 brackets.
+# Adding 1 handles cases where the number of unmatched brackets is odd, ensuring the number of swaps is rounded up to the correct amount.
 
 # 1963. Minimum Number of Swaps to Make the String Balanced
 # Medium
