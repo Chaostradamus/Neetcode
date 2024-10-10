@@ -3,6 +3,9 @@ class Solution:
         
 
 
+# o(n) one pass solution
+# keep running count of open parenthesis and if count htis negatives add 2 to count 
+
 # 1963. Minimum Number of Swaps to Make the String Balanced
 # Medium
 # Topics
