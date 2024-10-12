@@ -12,8 +12,17 @@ class Solution:
         
 
 
-# o(n) one pass solution
-# keep running count of open parenthesis and if count htis negatives add 2 to count 
+# o(n) one pass solution constant space
+# keep running count of open vs closed parenthesis as count vs a maxcount. maxcount is the highest the count gets positively counting
+# closed parentheses
+# we iterate through the string and if its an opening parenthesis we subtract 1 else we add 1
+# at the end of each iteration we take the max of current maxCount or current count
+# this ensures we have the highest number of difference between open and close
+# we need the highest closing count so we can +1 and remainder division by 2 after and return the result
+# we add 1 first because it theres an odd number then we round up
+# we divide by 2 because every swap fixes 2 brackets
+
+
 
 
 # Why do we divide by 2?
