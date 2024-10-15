@@ -1,5 +1,22 @@
-def Solution (self, ):
-    git add .
+class Solution:
+    def largestNumber(self, nums: List[int]) -> str:
+        for i, n in enumerate(nums):
+            nums[i] = str(n)
+
+        def compare(n1, n2):
+            if n1 + n2 > n2 + n1:
+                return -1
+            else:
+                return 1
+
+        nums = sorted(nums, key = cmp_to_key(compare))
+
+        return str(int("".join(nums)))
+
+
+# so the important thing in the largest number question is that we turn everything to strings,
+#  then we pass in everything to sorted. our compare function returns the larger number out of combined n1 and n2 on evenutally everything
+#  and returns it sorted to us?
 
 
 
