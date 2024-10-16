@@ -1,3 +1,25 @@
+# Time: O(n) Space: O(1)
+
+class Solution(object):
+    def gridGame(self, grid):
+        result = float("inf")
+        left, right = 0, sum(grid[0])
+
+        for a, b in zip(grid[0], grid[1]):
+            right -= a
+            result = min(result, max(left, right))
+            left += b
+        return result
+    
+# we keep a tally of left and right where left is the score of robot2
+# and right is the score of robot1 if he stays in the top row
+# on every iteration we subtract top element from right and take the minimum of result and max(remaining right, or left)
+# where left is the score if the robot switches below
+# then we add row 2 score to left to keep track of what the score would be if robot1 switched
+# return the result at the end
+# at the end we will have the highest optimal scoring path for robot1 and whats left for robot2 and return that remainder
+
+
 # 2017. Grid Game
 # Medium
 # Topics
