@@ -1,5 +1,7 @@
 class Solution:
     def numberofarrays():
+        for i in nums:
+            if i 
         
     # 2348. Number of Zero-Filled Subarrays
 # Medium
