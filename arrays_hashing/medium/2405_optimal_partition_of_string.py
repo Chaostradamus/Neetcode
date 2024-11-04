@@ -1,3 +1,7 @@
+class SOlution():
+    def __init__(self):
+        pass
+
 # 2405. Optimal Partition of String
 # Medium
 # Topics
