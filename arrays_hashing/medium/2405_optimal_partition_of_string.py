@@ -28,6 +28,31 @@ class Solution:
 # or the last subarray didnt finish with finding a duplicate and wont be added to res
 # i couldnt figure out how to start from the first element and edge case of the last element 
 
+class Solution:
+    def partitionString(self, s: str) -> int:
+        curSet = set()
+
+        res = 1
+
+        for c in s:
+            if c in curSet:
+                res +=1
+                curSet = set()
+            curSet.add(c)
+        return res
+    
+# neetcodes
+# same thinking but way more elegantly written
+# o(n) and actually constant time space cause at most its 26 characters in the alphabet in the hashset
+# create a set and res initialized to 1...1 instead of 0 because we deal with the edge case as stated in my code above
+# we iterate through every character and if its in the set then we found a duplicate..we add 1 to res and reset duplicate set
+# else we will ad the current letter to hashset
+
+# this works smoothly because if we run into a duplicate at any point we will add to res and eset teh hashset
+# there is no need to append to a res array or to keep track of anything before the character since we only need the total
+# and not the possible combinations of substrings
+
+
 # 2405. Optimal Partition of String
 # Medium
 # Topics
