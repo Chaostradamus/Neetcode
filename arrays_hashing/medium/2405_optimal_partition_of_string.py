@@ -39,7 +39,7 @@ class Solution:
                 res +=1
                 curSet = set()
             curSet.add(c)
-        return res
+        return res + 1
     
 # neetcodes
 # same thinking but way more elegantly written
