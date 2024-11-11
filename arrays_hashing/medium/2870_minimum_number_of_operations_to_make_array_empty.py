@@ -39,7 +39,7 @@ class Solution:
         return res
 
 
-# neetcode mathy solution
+# neetcode mathy solution o(n) time and space also
 # populate hashmap
 # mathy algo is that you divide by 3 and then add 1 if its not divisible by 3 hence the ceiling function rounding up
 # for example 100...we do 100 divided by 3
