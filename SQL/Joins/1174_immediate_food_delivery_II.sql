@@ -3,7 +3,7 @@ Select
 from Delivery d
 where (customer_id, order_date) in (
   Select customer_id, min(order_date) 
-  from Delivery as d
+  from Delivery as del
   group by customer_id
 );
 
