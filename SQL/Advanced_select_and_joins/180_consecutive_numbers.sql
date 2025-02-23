@@ -10,6 +10,13 @@ with cte as (
 select distinct num ConsecutiveNums from cte where (num=num1) and (num=num2)
 
 
+
+select distinct num as consecutiveNums
+from logs
+where (id + 1, num) in (select * from logs) and
+(id +2, num) in (select * from logs)
+
+
 -- 180. Consecutive Numbers
 -- Medium
 -- Topics
