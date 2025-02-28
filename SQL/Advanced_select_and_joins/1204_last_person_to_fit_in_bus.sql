@@ -1,3 +1,21 @@
+select q1.person_name
+from queue q1 join queue q2 on q1.turn >= q2.turn
+group by q1.turn
+having(sum(q2.weight)) <= 1000
+order by sum(q2.weight) desc
+limit 1
+
+
+
+select person_name
+from (
+    select person_name, weight, turn, sum(weight) over(order by turn) as total_weight
+    from queue
+) as subquery
+where total_weight <= 1000
+order by turn desc
+limit 1
+
 -- 1204. Last Person to Fit in the Bus
 -- Medium
 -- Topics
