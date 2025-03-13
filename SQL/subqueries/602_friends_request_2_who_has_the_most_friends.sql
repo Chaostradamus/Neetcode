@@ -1,3 +1,17 @@
+select id, count(*) as num
+from
+
+(
+SELECT requester_id AS id FROM RequestAccepted
+UNION ALL
+SELECT accepter_id AS id FROM RequestAccepted
+) as haha
+group by id
+
+order by num desc
+limit 1
+
+
 -- 602. Friend Requests II: Who Has the Most Friends
 -- Medium
 -- Topics
