@@ -11,7 +11,7 @@ where  (
     where e2.departmentid = e.departmentid and e2.salary >= e.salary
 
 ) <= 3
-order by department, salary desc
+order by department, salary DESC
 
 
 
